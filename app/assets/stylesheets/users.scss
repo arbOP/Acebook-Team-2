@@ -2,11 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
+.body-background{
    background-image: url("friends.png");
    background-repeat: no-repeat;
+   height: 500px;
+   background-position: center;
+   background-size: 500px 400px;
+   background-repeat: no-repeat;
    background-attachment: fixed;
-   background-size: cover;
  }
 
 .heading-center1 {
