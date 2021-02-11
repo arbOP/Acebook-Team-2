@@ -20,6 +20,7 @@
                         <% end %>
                         <button class="btn btn-outline-primary">Message</button>
                      <% end %>
+
                     </div>
                   </div>
                 </div>
@@ -92,9 +93,21 @@
                       <ul class="profile-header-tab nav nav-tabs">
                         <li class="nav-item"><a href="#profile-friends" class="nav-link active show" data-toggle="tab" style="color: #304a51;">FRIENDS</a></li>
                         <li class="nav-item"><a href="#profile-posts" class="nav-link" data-toggle="tab" style="color: #304a51;">POSTS</a></li>
+                        <li class="nav-item"><a href="#profile-images" class="nav-link" data-toggle="tab" style="color: #304a51;">IMAGES</a></li>
                     </ul>
                   </div>
                   <div class="tab-content">
+                  <div class="tab-pane fade" id="profile-images">
+                  <form action="/action_page.php">
+                  <div class="custom-file mb-3">
+                    <input type="file" class="custom-file-input" id="profile-images" name="filename">
+                    <label class="custom-file-label" for="profile-images">Choose file</label>
+                  </div>
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+                  </div>
                   <div class="tab-pane fade" style="text-align:center;" id="profile-posts">
                      <%# <h1>Posts</h1> %>
                      <% if session[:user]["id"] == @user.id %>
